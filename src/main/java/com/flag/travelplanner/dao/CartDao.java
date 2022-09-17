@@ -1,6 +1,7 @@
 package com.flag.travelplanner.dao;
 
 import com.flag.travelplanner.entity.Cart;
+import com.flag.travelplanner.entity.Options;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +17,7 @@ public class CartDao {
         Session session = null;
         try {
             session = sessionFactory.openSession();
-            OrderItem cartItem = session.get(OrderItem.class, orderItemId);
+            Options cartItem = session.get(Options.class, orderItemId);
             Cart cart = cartItem.getCart();
             cart.getOrderItemList().remove(cartItem);
 
@@ -38,7 +39,7 @@ public class CartDao {
     }
 
     public void removeAllCartItems(Cart cart) {
-        for (OrderItem item : cart.getOrderItemList()) {
+        for (Options item : cart.getOrderItemList()) {
             removeCartItem(item.getId());
         }
     }

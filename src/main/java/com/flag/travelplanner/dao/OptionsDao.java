@@ -12,9 +12,9 @@ public class OptionsDao {
     @Autowired
     private SessionFactory sessionFactory;
     public List<Option> getOneDayOptions() {
+
         return null;
     }
-
     public List<Option> getThreeDayOptions() {
         return null;
     }
@@ -23,4 +23,5 @@ public class OptionsDao {
         return null;
     }
 
+    public List<Option> getOptionList() {return null;}
 }

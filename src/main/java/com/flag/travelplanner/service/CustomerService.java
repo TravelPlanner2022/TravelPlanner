@@ -23,5 +23,3 @@ public class CustomerService {
         return customerDao.getCustomer(email);
     }
 }
-
-

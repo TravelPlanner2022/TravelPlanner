@@ -10,6 +10,7 @@ public class Customer implements Serializable {
     private static final long serialVersionUID = 2652327633296064143L;
 
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer customerId;
 
     private String firstName;
@@ -74,8 +75,6 @@ public class Customer implements Serializable {
     public void setPassword(String password) {
         this.password = password;
     }
-
-
 
     public Cart getCart() {
         return cart;

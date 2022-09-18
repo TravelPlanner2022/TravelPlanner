@@ -1,6 +1,7 @@
 package com.flag.travelplanner.service;
 
 import com.flag.travelplanner.dao.CustomerDao;
+import com.flag.travelplanner.entity.Cart;
 import com.flag.travelplanner.entity.Customer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -22,5 +23,3 @@ public class CustomerService {
         return customerDao.getCustomer(email);
     }
 }
-
-
